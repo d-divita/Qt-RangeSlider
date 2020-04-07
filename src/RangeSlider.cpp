@@ -284,6 +284,7 @@ void RangeSlider::setLowerValue(int aLowerValue)
 
     mLowerValue = aLowerValue;
     emit lowerValueChanged(mLowerValue);
+	emit qcustomplot_LowerUpperValuesChanged(QCPRange(mLowerValue, mUpperValue));
 
     update();
 }
@@ -302,6 +303,7 @@ void RangeSlider::setUpperValue(int aUpperValue)
 
     mUpperValue = aUpperValue;
     emit upperValueChanged(mUpperValue);
+	emit qcustomplot_LowerUpperValuesChanged(QCPRange(mLowerValue, mUpperValue));
 
     update();
 }

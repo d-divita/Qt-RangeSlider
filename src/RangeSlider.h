@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPainter>
 #include <QMouseEvent>
+#include "qcustomplot.h"
 
 class RangeSlider : public QWidget
 {
@@ -54,6 +55,7 @@ protected:
 signals:
     void lowerValueChanged(int aLowerValue);
     void upperValueChanged(int aUpperValue);
+	void qcustomplot_LowerUpperValuesChanged(QCPRange);
     void rangeChanged(int aMin, int aMax);
 
 public slots:
