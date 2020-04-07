@@ -1,14 +1,10 @@
-
 #include "RangeSlider.h"
-#include <QDebug>
 
 namespace
 {
-
-const int scHandleSideLength = 11;
-const int scSliderBarHeight = 5;
-const int scLeftRightMargin = 1;
-
+	const int scHandleSideLength = 11;
+	const int scSliderBarHeight = 5;
+	const int scLeftRightMargin = 1;
 }
 
 RangeSlider::RangeSlider(QWidget* aParent)
@@ -264,6 +260,12 @@ int RangeSlider::GetUpperValue() const
 
 void RangeSlider::SetUpperValue(int aUpperValue)
 {
+    setUpperValue(aUpperValue);
+}
+
+void RangeSlider::SetLowerUpperValues(int aLowerValue, int aUpperValue)
+{
+    setLowerValue(aLowerValue);
     setUpperValue(aUpperValue);
 }
 

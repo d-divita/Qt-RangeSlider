@@ -1,3 +1,4 @@
+// forked from: https://github.com/ThisIsClark/Qt-RangeSlider
 #pragma once
 
 #include <QWidget>
@@ -18,8 +19,8 @@ public:
     };
     Q_DECLARE_FLAGS(Options, Option)
 
-    RangeSlider( QWidget* aParent = Q_NULLPTR);
-    RangeSlider( Qt::Orientation ori, Options t = DoubleHandles, QWidget* aParent = Q_NULLPTR);
+    RangeSlider(QWidget* aParent = Q_NULLPTR);
+    RangeSlider(Qt::Orientation ori, Options t = DoubleHandles, QWidget* aParent = Q_NULLPTR);
 
     QSize minimumSizeHint() const override;
 
@@ -34,7 +35,9 @@ public:
 
     int GetUpperValue() const;
     void SetUpperValue(int aUpperValue);
-
+	
+	void SetLowerUpperValues(int aLowerValue, int aUpperValue);
+	
     void SetRange(int aMinimum, int aMaximum);
 
 protected:
