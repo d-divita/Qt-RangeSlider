@@ -2,9 +2,9 @@
 
 namespace
 {
-	const int scHandleSideLength = 11;
-	const int scSliderBarHeight = 5;
-	const int scLeftRightMargin = 1;
+    const int scHandleSideLength = 11;
+    const int scSliderBarHeight = 5;
+    const int scLeftRightMargin = 1;
 }
 
 RangeSlider::RangeSlider(QWidget* aParent)
@@ -20,7 +20,7 @@ RangeSlider::RangeSlider(QWidget* aParent)
       mBackgroudColorDisabled(Qt::darkGray),
       mBackgroudColor(mBackgroudColorEnabled),
       orientation(Qt::Horizontal),
-	  type(DoubleHandles)
+      type(DoubleHandles)
 {
     setMouseTracking(true);
 }
@@ -284,7 +284,7 @@ void RangeSlider::setLowerValue(int aLowerValue)
 
     mLowerValue = aLowerValue;
     emit lowerValueChanged(mLowerValue);
-	emit qcustomplot_LowerUpperValuesChanged(QCPRange(mLowerValue, mUpperValue));
+    emit qcustomplot_LowerUpperValuesChanged(QCPRange(mLowerValue, mUpperValue));
 
     update();
 }
@@ -303,7 +303,7 @@ void RangeSlider::setUpperValue(int aUpperValue)
 
     mUpperValue = aUpperValue;
     emit upperValueChanged(mUpperValue);
-	emit qcustomplot_LowerUpperValuesChanged(QCPRange(mLowerValue, mUpperValue));
+    emit qcustomplot_LowerUpperValuesChanged(QCPRange(mLowerValue, mUpperValue));
 
     update();
 }

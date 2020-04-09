@@ -36,9 +36,9 @@ public:
 
     int GetUpperValue() const;
     void SetUpperValue(int aUpperValue);
-	
-	void SetLowerUpperValues(int aLowerValue, int aUpperValue);
-	
+
+    void SetLowerUpperValues(int aLowerValue, int aUpperValue);
+
     void SetRange(int aMinimum, int aMaximum);
 
 protected:
@@ -55,7 +55,7 @@ protected:
 signals:
     void lowerValueChanged(int aLowerValue);
     void upperValueChanged(int aUpperValue);
-	void qcustomplot_LowerUpperValuesChanged(QCPRange);
+    void qcustomplot_LowerUpperValuesChanged(QCPRange);
     void rangeChanged(int aMin, int aMax);
 
 public slots:
